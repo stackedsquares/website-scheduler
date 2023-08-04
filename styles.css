@@ -1,0 +1,139 @@
+body {
+    width: 500px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+#banner {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], input[type="time"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+th, td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+
+#message {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.message-success {
+    background-color: #4CAF50;
+}
+
+.message-error {
+    background-color: #f44336;
+}
+
+.info-icon {
+    font-size: 18px;
+    color: #666;
+    cursor: help;
+    position: relative;
+}
+
+.info-icon:hover:after {
+    content: attr(tooltip);
+    position: absolute;
+    left: 0;
+    top: 20px;
+    min-width: 200px;
+    border: 1px solid #666;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+button.cancel {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #f44336;
+}
+
+button.cancel:hover {
+    color: #da190b;
+}
+
+button.cancel svg {
+    width: 20px;
+    height: 20px;
+}
+
+

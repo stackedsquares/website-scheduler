@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="background.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="banner">Website Scheduler</div>
+    <div id="message" style="display:none"></div>
+
+    <div class="form-box">
+    <h3>Schedule By Time <span class="info-icon" tooltip="Schedule a website to open at a specific time, everyday.">&#9432;</span></h3>
+        <form id="timeScheduleForm">
+            <label>
+              Website URL:
+              <input type="text" id="timeUrl" required>
+            </label>
+            <label>
+              Time :
+              <input type="time" id="time" class="small-input" required>
+            </label>
+            <button type="submit">Add Schedule</button>
+        </form>
+    </div>
+
+    <div class="form-box">
+      <h3>Schedule By Frequency <span class="info-icon" tooltip="Schedule a website to open repeatedly every X minutes.">&#9432;</span></h3>
+        <form id="frequencyScheduleForm">
+            <label>
+              Website URL:
+              <input type="text" id="frequencyUrl" required>
+            </label>
+            <label>
+              Frequency (in minutes):
+              <input type="number" id="frequency" class="small-input" min="1" required>
+            </label>
+            <button type="submit">Add Schedule</button>
+        </form>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <a href="https://chrome.google.com/webstore/detail/website-scheduler/hhpndafankhdicdhjmhnpjdcpmhglebl/reviews" target="_blank" style="width: 30%;">
+        <button style="width: 100%; height: 30px; font-size: 12px; padding: 0;">Review</button>
+        </a>
+        <a href="https://privacy.loukya.capital/feedback" target="_blank" style="width: 30%;">
+        <button style="width: 100%; height: 30px; font-size: 12px; padding: 0;">Feature Request</button>
+        </a>
+        <a href="https://donate.stripe.com/bIY6oZcGsaV9fXq6oo" target="_blank" style="width: 30%;">
+        <button style="width: 100%; height: 30px; font-size: 12px; padding: 0;">Donate</button>
+        </a>
+    </div>
+
+  
+  
+    <div id="schedules">
+        <h3>Active Schedules</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:40%">Website</th>
+                    <th style="width:15%">Freq.</th>
+                    <th style="width:15%">Time</th>
+                    <th style="width:15%">Enabled</th>
+                    <th style="width:15%">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleBody">
+            </tbody>
+        </table>
+    </div>
+        
+  
+    <script src="popup.js"></script>
+</body>
+</html>
